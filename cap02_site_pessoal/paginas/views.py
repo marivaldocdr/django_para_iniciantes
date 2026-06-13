@@ -8,4 +8,8 @@ def home_page_view(request):
 
 
 def about_page_view(request):
-    return render(request, "paginas/sobre.html")
+    contexto = {
+        "nome": "Marivaldo",
+        "idade": 49,
+    }  # novo
+    return render(request, "paginas/sobre.html", contexto)  # novo
